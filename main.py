@@ -118,26 +118,10 @@ def validate():
                 email_error = "Not a valid email"
                 email_input = ""
 
-    # ------------ REFACTORING ATTEMPT ------------
-    # fields = ["username", "password", "verify"]
-    # for field in fields:
-    #     field_input = field + "_input"
-    #     field_len = len(field_input)
-    #     field_error = field + "_error"
-    #     if not is_filled(field_input):
-    #         field_error = "This field cannot be empty"
-    #         field_input = ""
-    #     else:
-    #         if field_len > 20 or field_len < 3:
-    #             field_error = field + " must be between 3 and 20 characters"
-    #             field_input = ""
-
     # -------------- ERROR CHECK ----------------
     if not username_error and not password_error and not verify_error and not email_error:  # if we don't have any error messages:
         return render_template("welcome.html", username=username_input)
     else:
         return render_template ("signup.html", username_error=username_error, password_error=password_error, verify_error=verify_error, email_error=email_error)
-
-    # return render_template("welcome.html", username=username_input)
 
 app.run()
