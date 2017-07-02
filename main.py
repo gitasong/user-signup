@@ -31,6 +31,7 @@ def validate_email(val):
     # regex for e-mails: /[a-z0-9_]+\.?[a-z0-9_]+@[a-z]+\.[a-z]+/i
     # alternate: "[a-zA-Z0-9_]+\.?[a-zA-Z0-9_]+@[a-z]+\.[a-z]+"
     valid_email = re.compile("[a-zA-Z0-9_]+\.?[a-zA-Z0-9_]+@[a-z]+\.[a-z]+")
+    # Note: I was unhappy with the email restrictions, as they wouldn't let my own email pass. So I decided to change the requirements to allow one dot (".") before the "@" symbol and one dot (".") after (obviously, before the extension). The characters a-z, A-Z, the digits 0-9, and the underscore ("_") character are also allowed before the "@" symbol.
     if valid_email.match(val):
         return True
     else:
