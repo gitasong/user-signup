@@ -1,41 +1,87 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
-        .error { color: red; }
+      body {
+        background-color: #337ab7;
+      }
+      .form-box {
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        background-color: #fff;
+        margin: 100px auto auto auto;
+        padding: 20px 30px 20px 45px;
+      }
+
+      h1 {
+        color: #337ab7;
+        margin-bottom: 20px;
+        padding-left: 7px;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      .table > tbody > tr > td {
+        border-top: none;
+      }
+
+      input.btn.btn-primary {
+        margin-top: 15px;
+      }
+
+      .error {
+        color: red;
+      }
     </style>
     <title>New User Signup</title>
   </head>
   <body>
-    <h1>New User Signup</h1>
-    <form action="/validate-form" method="post">
-      <table class="table">
-        <tbody>
-          <tr class="form-group">
-            <td><label for="username">Username: </label></td>
-            <td><input type="text" class="form-control" name="username" id="username"></td>
-            <td><p class="error" value="">{{username_error}}</p></td>
-          </tr>
-          <tr class="form-group">
-            <td><label for="password">Password: </label></td>
-            <td><input type="password" class="form-control" name="password" id="password"></td>
-            <td><p class="error" value="">{{password_error}}</p></td>
-          </tr>
-          <tr class="form-group">
-            <td><label for="verify">Verify Password: </label></td>
-            <td><input type="password" class="form-control" name="verify" id="verify"></td>
-            <td><p class="error" value="">{{verify_error}}</p></td>
-          </tr>
-          <tr class="form-group">
-            <td><label for="email">Email (optional): </label></td>
-            <td><input type="text" class="form-control" name="email" id="email"></td>
-            <td><p class="error" value="">{{email_error}}</p></td>
-          </tr>
-          <tr>
-            <td><input type="submit" name="submit" id="submit" value="Submit"></td>
-          </tr>
-        </tbody>
-      </table>
-    </form>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+          <div class="form-box">
+            <h1>New User Signup</h1>
+            <form action="/validate-form" method="post">
+              <table class="table">
+                <tbody>
+                  <tr class="form-group">
+                    <td><label for="username">Username: </label></td>
+                    <td><input type="text" class="form-control" name="username" id="username" placeholder="username"></td>
+                    <td><p class="error" value="">{{username_error}}</p></td>
+                  </tr>
+                  <tr class="form-group">
+                    <td><label for="password">Password: </label></td>
+                    <td><input type="password" class="form-control" name="password" id="password" placeholder="••••••••"></td>
+                    <td><p class="error" value="">{{password_error}}</p></td>
+                  </tr>
+                  <tr class="form-group">
+                    <td><label for="verify">Verify Password: </label></td>
+                    <td><input type="password" class="form-control" name="verify" id="verify" placeholder="••••••••"></td>
+                    <td><p class="error" value="">{{verify_error}}</p></td>
+                  </tr>
+                  <tr class="form-group">
+                    <td><label for="email">Email (optional): </label></td>
+                    <td><input type="text" class="form-control" name="email" id="email" placeholder="you@yourdomain.com"></td>
+                    <td><p class="error" value="">{{email_error}}</p></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><input type="submit" name="submit" id="submit" class="btn btn-primary" value="Submit"></input></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+    </div>
   </body>
 </html>
