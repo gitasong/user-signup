@@ -106,10 +106,7 @@ def validate():
             verify_error = "Passwords must match"
             verify_input = ""
 
-    if not is_filled(email_input):
-        email_error = "This field cannot be empty"
-        email_input = ""
-    else:
+    if is_filled(email_input):
         email_len = len(email_input)
         if  email_len > 20 or email_len < 3:
             email_error = "Email must be between 3 and 20 characters"
