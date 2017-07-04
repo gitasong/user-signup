@@ -96,7 +96,7 @@ def validate():
         else:
             if not no_whitespace(username_input):
                 password_error = "Spaces are not allowed"
-                username_input = ""
+                password_input = ""
 
     if not is_filled(verify_input):
         verify_error = "This field cannot be empty"
@@ -120,6 +120,9 @@ def validate():
     if not username_error and not password_error and not verify_error and not email_error:  # if we don't have any error messages:
         return render_template("welcome.html", username=username_input)
     else:
-        return render_template ("signup.html", username_error=username_error, password_error=password_error, verify_error=verify_error, email_error=email_error)
+        return render_template ("signup.html",
+        username_input=username_input,
+        email_input=email_input,
+        username_error=username_error, password_error=password_error, verify_error=verify_error, email_error=email_error)
 
 app.run()
