@@ -1,0 +1,32 @@
+body {
+  background-color: #337ab7;
+}
+.form-box {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #fff;
+  margin: 100px auto auto auto;
+  padding: 20px 30px 20px 45px;
+}
+
+h1 {
+  color: #337ab7;
+  margin-bottom: 20px;
+  padding-left: 7px;
+}
+
+table {
+  width: 100%;
+}
+
+.table > tbody > tr > td {
+  border-top: none;
+}
+
+input.btn.btn-primary {
+  margin-top: 15px;
+}
+
+.error {
+  color: red;
+}
