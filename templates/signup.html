@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/styles.css') }}" type="text/css">
-    <title>New User Signup</title>
-  </head>
-  <body>
+{% extends "base.html" %}
+
+  {% block content %}
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3">
@@ -50,5 +45,4 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
+  {% endblock %}
